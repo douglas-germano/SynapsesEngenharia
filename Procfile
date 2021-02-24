@@ -1,0 +1,1 @@
+web: gunicorn prefeitura.wsgi --log-file 
