@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+html,
+body {
+  width: 100%;
+  padding: 60px;
+  margin: auto;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 450px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-register {
+  width: 100%;
+  max-width: 450px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-register-vehicle {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  margin: auto;
+}

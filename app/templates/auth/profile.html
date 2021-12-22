@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Login - Iridium
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+
+{% block content %}
+<nav class="navbar fixed-top navbar-expand-lg" style="background-color: #e3f2fd;">
+    <a class="navbar-brand">Iridium</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ url_for('cadastros') }}"> Cadastros</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ url_for('manutencoes') }}">Manutenções</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ url_for('relatorios') }}">Relatórios</a>
+        </li>
+    </ul>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url_for('auth.logout') }}">Sair</a>
+        </li>
+    </ul>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+        <a> Olá:</a> 
+        {% if current_user.is_authenticated %}
+        {{ current_user.name }}
+        {% endif %}
+        </li>
+    </ul>
+  </nav>
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}

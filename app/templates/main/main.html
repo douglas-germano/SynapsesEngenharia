@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Iridium
+{% endblock %}
+
+
+{% block navbar %}
+<nav class="navbar fixed-top navbar-expand-lg" style="background-color: #e3f2fd;">
+    <a class="navbar-brand">Iridium</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url_for('auth.register') }}">Registrar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url_for('auth.login') }}">Login</a>
+        </li>
+    </ul>
+  </nav>
+{% endblock %}
+
+
+{% block content %}
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}

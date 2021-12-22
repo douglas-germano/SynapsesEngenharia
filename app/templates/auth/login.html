@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}
+Login - Sofia
+{% endblock %}
+
+
+{% block navbar %}
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="form-signin">
+        <div class="shadow p-3 mb-5 bg-white rounded">   
+            <h1>
+                Login:
+            </h1>
+                {{ wtf.quick_form(form) }}
+            <p>
+                Novo usuário?
+            <a href="{{ url_for('auth.register') }}">
+                Clique aqui para se registrar.
+            </a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}

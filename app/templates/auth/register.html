@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+
+{% block title %}
+Iridium - Registro
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container">
+    <div class="form-register">
+        <div class="shadow p-3 mb-5 bg-white rounded">
+        
+                        <h1>
+                        Faça seu registro:
+                        </h1>
+                        {{ wtf.quick_form(form) }}
+                        <p>
+                        Já têm um usuário?
+                        <a href="{{ url_for('auth.login') }}"> Clique aqui para fazer Login.</a>                
+                        </p>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}
