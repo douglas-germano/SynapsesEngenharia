@@ -1,15 +1,11 @@
 {% extends 'base.html' %}
-
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}
-Login - Iridium
+Iridium
 {% endblock %}
 
 {% block navbar %}
-{% endblock %}
-
-
-{% block content %}
 <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #e3f2fd;">
     <a class="navbar-brand">Iridium</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
@@ -42,7 +38,42 @@ Login - Iridium
         {% endif %}
         </li>
     </ul>
-  </nav>
+</nav>
+{% endblock %}
+
+
+{% block content %}
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Código:</th>
+        <th scope="col">Placa:</th>
+        <th scope="col">Modelo:</th>
+        <th scope="col">Fabricante:</th>
+        <th scope="col">Renavan:</th>
+        <th scope="col">Combustível:</th>
+        <th scope="col">Lotação:</th>
+        <th scope="col">Ano de Fabricação:</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for vehicles in vehicles %}
+        <tr>
+            <td>{{ vehicles.id }}</td>
+            <td>{{ vehicles.placa }}</td>
+            <td>{{ vehicles.modelo }}</td>
+            <td>{{ vehicles.fabricante }}</td>
+            <td>{{ vehicles.renavan }}</td>
+            <td>{{ vehicles.combustivel }}</td>
+            <td>{{ vehicles.lotacao }}</td>
+            <td>{{ vehicles.anofabricacao }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
 {% endblock %}
 
 

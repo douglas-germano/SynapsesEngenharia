@@ -32,6 +32,11 @@ def cadastros():
         return redirect(url_for('cadastros')) 
     return render_template("main/cadastros.html", form=form)
 
+@app.route("/veiculos", methods=['GET'])
+@login_required
+def veiculos():
+    vehicles = Vehicle.query.all()
+    return render_template("main/veiculos.html", vehicles=vehicles)
 
 @app.route('/relatorios')
 @login_required
