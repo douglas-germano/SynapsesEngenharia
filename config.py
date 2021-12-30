@@ -1,5 +1,5 @@
 DEBUG = False
-SQLALCHEMY_DATABASE_URI = 'sqlite:///storage.db'
+SQLALCHEMY_DATABASE_URI = 'postgres://ypwgjuolcnzlct:1f6b0a50028fd07e325ad23eace24193d40e5a9225c0f19acae56d088355ed7b@ec2-52-70-205-234.compute-1.amazonaws.com:5432/db0b8rftq0n73p'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 FLASK_ADMIN_SWATCH = 'cerulean'
 SECRET_KEY = 'J604031298'
