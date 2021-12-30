@@ -1,4 +1,4 @@
-DEBUG = True
+DEBUG = False
 SQLALCHEMY_DATABASE_URI = 'sqlite:///storage.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 FLASK_ADMIN_SWATCH = 'cerulean'
