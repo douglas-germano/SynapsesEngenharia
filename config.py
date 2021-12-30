@@ -1,5 +1,5 @@
 DEBUG = False
-SQLALCHEMY_DATABASE_URI = 'postgres://ypwgjuolcnzlct:1f6b0a50028fd07e325ad23eace24193d40e5a9225c0f19acae56d088355ed7b@ec2-52-70-205-234.compute-1.amazonaws.com:5432/db0b8rftq0n73p'
+SQLALCHEMY_DATABASE_URI = 'postgres://qzqmguvjfuqvbz:616c067fd1f8540d904698ee6be8d43261d7ad6c4e29f905d3d3208c3d7276a7@ec2-35-173-83-57.compute-1.amazonaws.com:5432/dd3c597193q2m0'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 FLASK_ADMIN_SWATCH = 'cerulean'
 SECRET_KEY = 'J604031298'
