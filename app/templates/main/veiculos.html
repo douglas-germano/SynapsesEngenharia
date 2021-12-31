@@ -47,7 +47,6 @@ Iridium
 <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">Código:</th>
         <th scope="col">Placa:</th>
         <th scope="col">Modelo:</th>
         <th scope="col">Fabricante:</th>
@@ -55,12 +54,12 @@ Iridium
         <th scope="col">Combustível:</th>
         <th scope="col">Lotação:</th>
         <th scope="col">Ano de Fabricação:</th>
+        <th scope="col">Ações:</th>
       </tr>
     </thead>
     <tbody>
         {% for vehicles in vehicles %}
         <tr>
-            <td>{{ vehicles.id }}</td>
             <td>{{ vehicles.placa }}</td>
             <td>{{ vehicles.modelo }}</td>
             <td>{{ vehicles.fabricante }}</td>
@@ -68,6 +67,9 @@ Iridium
             <td>{{ vehicles.combustivel }}</td>
             <td>{{ vehicles.lotacao }}</td>
             <td>{{ vehicles.anofabricacao }}</td>
+            <td>
+                <a class="btn btn-primary" href="/editar-veiculo/{{ vehicles.id }}" role="button">Editar</a>
+                <a class="btn btn-danger" href="/veiculos/excluir-veiculo/{{ vehicles.id }}" role="button">Excluir</a>
         </tr>
     {% endfor %}
     </tbody>
