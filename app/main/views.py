@@ -38,6 +38,14 @@ def veiculos():
     vehicles = Vehicle.query.all()
     return render_template("main/veiculos.html", vehicles=vehicles)
 
+@app.route("/veiculos/excluir-veiculo/<int:id>", methods=['GET', 'POST'])
+@login_required
+def delete_vehicle(id):
+    delete_vehicle = Vehicle.query.get_or_404(id)
+    db.session.delete(delete_vehicle)
+    db.session.commit()
+    return redirect(url_for('veiculos'))
+
 @app.route('/relatorios')
 @login_required
 def relatorios():
