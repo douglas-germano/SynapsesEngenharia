@@ -53,7 +53,7 @@ class Vehicle(db.Model):
     combustivel = db.Column(db.String(64))
     lotacao = db.Column(db.String(64))
     anofabricacao = db.Column(db.String(64))
-    manutencao = db.relationship('Maintenance', lazy=True)
+
 
     def __init__(self, placa, modelo, fabricante, renavan, combustivel, lotacao, anofabricacao):
         self.placa = placa
@@ -82,7 +82,7 @@ class Maintenance(db.Model):
     valor_final = db.Column(db.Integer)
     hodometro = db.Column(db.Integer)    
     tabela_fipe = db.Column(db.String(64))
-    veiculo = db.Column(db.Integer, db.ForeignKey('vehicles.placa'), nullable=False)
+    veiculo = db.Column(db.String(64))
 
     def __init__(self, orcamento_id, tipo_manutencao, descricao, valor_unit, valor_final, tabela_fipe, quant_itens, hodometro):
         self.orcamento_id = orcamento_id
