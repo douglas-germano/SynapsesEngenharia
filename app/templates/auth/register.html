@@ -13,22 +13,26 @@ Iridium - Registro
 
 {% block content %}
 
-
 <div class="container">
-    <div class="form-register">
-        <div class="shadow p-3 mb-5 bg-white rounded">
-        
-                        <h1>
-                        Faça seu registro:
-                        </h1>
-                        {{ wtf.quick_form(form) }}
-                        <p>
-                        Já têm um usuário?
-                        <a href="{{ url_for('auth.login') }}"> Clique aqui para fazer Login.</a>                
-                        </p>
-        </div>
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-6">
+        <h1>
+            Faça seu registro:
+            </h1>
+            {{ wtf.quick_form(form) }}
+            <p>
+            Já têm um usuário?
+            <a href="{{ url_for('auth.login') }}"> Clique aqui para fazer Login.</a>                
+            </p>
+      </div>
+      <div class="col">
+      </div>
     </div>
-</div>
+    </div>
+  </div>
+
 
 
 
