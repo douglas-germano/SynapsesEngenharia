@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}
+Iridium
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="form-register-vehicle">
+      <div class="shadow p-3 mb-5 bg-white rounded">
+      
+                      <h1>
+                      Edite aqui o Veículo:
+                      </h1>
+                      {{ wtf.quick_form(form) }}
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+{% block footer %}
+{% endblock %}

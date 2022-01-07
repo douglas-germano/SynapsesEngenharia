@@ -24,7 +24,7 @@ def register():
             user = User(email, name, password)
             db.session.add(user)
             db.session.commit()
-        return redirect(url_for('auth.login')) 
+        return redirect(url_for('auth.login'))
     return render_template('auth/register.html', form=form)
 
 
@@ -55,4 +55,5 @@ def profile():
 @login_required
 def logout():
     logout_user()
+    flash("Até mais!")
     return redirect(url_for('auth.login'))
